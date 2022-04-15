@@ -14,6 +14,11 @@ jobs:
     - name: Fetch latest karnataka-eletricity-generation stats.
       run: |-
         curl https://kptclsldc.in/StateGen.aspx > karnataka-eletricity-generation.html
+    - name: Fetch latest karnataka-eletricity-load stats.
+      run: |-
+        curl https://kptclsldc.in/Loadcurve.htm > karnataka-eletricity-load.html
+
+
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
