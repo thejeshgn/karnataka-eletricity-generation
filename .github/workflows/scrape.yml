@@ -1,4 +1,4 @@
-name: Scrape latest privacy and terms
+name: Scrape latest electricity data
 
 on:
   push:
