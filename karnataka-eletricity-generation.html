@@ -1,732 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parser Error</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:pointer; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
 
+    <body bgcolor="white">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+            <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head><title>
-	State Generation
-</title><meta HTTP-EQUIV="REFRESH" content="60" /></head>
-<body>
-    <form method="post" action="./StateGen.aspx" id="form1">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+            <h2> <i>Parser Error</i> </h2></span>
 
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4DD75090" />
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAIeghqipSz3SxgRGJ104plmESCFkFW/RuhzY1oLb/NUVO1qtAIVrJz3h0zthPwhnT4Trh/PUwJ+wJ5UndoyPV1O" />
-    <div>
-                <div style="width: 1164px; height: 113px; z-index: 1; left: 2px; position: absolute; top: 5px; text-align: center; background: #999; /* for non-css3 browsers */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3E0FF', endColorstr='#16406B'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#A3E0FF), to(#16406B)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #A3E0FF,  #16406B); /* for firefox 3.6+ */  color: #ccffff;
-            left: 2px; width: 1166px; color: #ccffff; position: absolute; top: 5px; height: 141px;
-            text-align: center">
-            <img align="right" src="KPTCL-Logo.jpg" style="font-weight: bold; width: 134px; height: 146px" /><span
-                style="font-size: 20pt"><span style="color: #16406b; text-decoration: underline"><strong>KARNATAKA
-                    POWER TRANSMISSION CORPORATION LIMITED<br />
-                    <br />
-                </strong></span><span style="font-size: 16pt; color: #16406b"><strong>Karnataka State
-                    Generation<br />
-                </strong>
-                    <br />
-                    <span style="font-size: 12pt"><span style="font-family: Calibri"><span style="color: lightcyan">
-                        Karnataka Power Corporation Limited and Major Independent Power Producers<br />
-                    </span>&nbsp; &nbsp; </span>&nbsp; &nbsp;</span><span style="font-size: 14pt; font-family: Sylfaen"><em>&nbsp;</em></span></span></span></div>
-        <div style="z-index: 1;  background: #999; /* for non-css3 browsers */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3E0FF', endColorstr='#FFFFFF'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#A3E0FF), to(#FFFFFF)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #A3E0FF,  #FFFFFF);
-            left: 2px; width: 154px; position: absolute; top: 154px; height: 696px">
-            <a id="HyperLink3" href="Default.aspx" style="display:inline-block;vertical-align: baseline; text-align: left"><font color="DarkBlue" size="5">Home</font></a>
-            <a id="HyperLink4" href="StateGen.aspx" style="display:inline-block;vertical-align: bottom; text-align: left"><font color="DarkBlue" size="5">Generation</font></a>
-            <a id="HyperLink5" href="Snapshot.aspx" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">ESCOM Sch&Actual</font></a>
-            <a id="HyperLink6" href="StateNCEP.aspx" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">NCEPs</font></a>
-                 <a id="HyperLink9" href="ipps.aspx" style="display:inline-block;vertical-align: bottom; text-align: left"><font color="DarkBlue" size="5">Major Purchases</font></a>
-            <a id="HyperLink7" href="escom.aspx" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">ESCOM Wise Load</font></a><br />
-            <a id="HyperLink8" href="Load%20curve.aspx" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">State Vital Information</font></a>
-                <a id="HyperLink11" href="http://218.248.45.137:8282/LoadCurveUpload/lcdownloadview.asp" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">Load Curve</font></a>
-            <a id="HyperLink1" href="Load_Wind.aspx" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">Load-Wind-Solar Profile</font></a><br />
-            <a id="HyperLink10" href="http://www.imd.gov.in/pages/satmet_main.php" style="display:inline-block;text-align: left"><font color="DarkBlue" size="5">Weather Today</font></a></div>
-        <table style="z-index: 1; left: 168px; width: 995px; position: absolute; top: 199px;
-            height: 562px; background: #999; /* for non-css3 browsers */
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A3E0FF', endColorstr='#FFFFFF'); /* for IE */
-background: -webkit-gradient(linear, left top, left bottom, from(#A3E0FF), to(#FFFFFF)); /* for webkit browsers */
-background: -moz-linear-gradient(top,  #A3E0FF,  #FFFFFF);" border="2" bordercolor="#000099">
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px; color: #000000">
-                    GENERATING STATIONS</td>
-                <td bgcolor="#3399cc" style="width: 81px; text-align: center">
-                    CAP(MW)</td>
-                <td bgcolor="#3399cc" style="width: 104px; text-align: center">
-                    TOTAL GENERATION</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 1</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 2</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 3</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 4</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 5</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 6</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 7</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 8</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 9</td>
-                <td bgcolor="#3399cc" style="text-align: center">
-                    UNIT 10</td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    RTPS</td>
-                <td style="width: 81px; text-align: center">
-                    1720</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblrtptot">253</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp3">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp4">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp5">127</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp6">134</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp7">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblrtp8">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    BTPS</td>
-                <td style="width: 81px; text-align: center">
-                    1700</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblbtptot">649</span></td>
-                <td style="text-align: center">
-                    <span id="lblbtp1">290</span></td>
-                <td style="text-align: center">
-                    <span id="lblbtp2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbtp3">373</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-             <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    YTPS</td>
-                <td style="width: 81px; text-align: center">
-                    1600</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="ytptot">427</span></td>
-                <td style="text-align: center">
-                    <span id="ytp1">427</span></td>
-                <td style="text-align: center">
-                    <span id="ytp2">0</span></td>
-                
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px; height: 21px">
-                    SHARAVATHI</td>
-                <td style="width: 81px; height: 21px; text-align: center">
-                    1035</td>
-                <td style="width: 104px; height: 21px; text-align: center">
-                    <span id="lblshvytot">258</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty1">40</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty2">0</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty3">0</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty4">40</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty5">0</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty6">40</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty7">40</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty8">0</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty9">97</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshvty10">0</span></td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px; height: 24px;">
-                    NAGJHARI</td>
-                <td style="width: 81px; text-align: center; height: 24px;">
-                    900</td>
-                <td style="width: 104px; text-align: center; height: 24px;">
-                    <span id="lblngjtot">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj1">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj2">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj3">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj4">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj5">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                    <span id="lblngj16">0</span></td>
-                <td style="text-align: center; height: 24px;">
-                </td>
-                <td style="text-align: center; height: 24px;">
-                </td>
-                <td style="text-align: center; height: 24px;">
-                </td>
-                <td style="text-align: center; height: 24px;">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    VARAHI</td>
-                <td style="width: 81px; text-align: center">
-                    460</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblvrhtot">294</span></td>
-                <td style="text-align: center">
-                    <span id="lblvrh1">73</span></td>
-                <td style="text-align: center">
-                    <span id="lblvrh2">72</span></td>
-                <td style="text-align: center">
-                    <span id="lblvrh3">74</span></td>
-                <td style="text-align: center">
-                    <span id="lblvrh4">74</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    KODSALLI</td>
-                <td style="width: 81px; text-align: center">
-                    120</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblkdsltot">71</span></td>
-                <td style="text-align: center">
-                    <span id="lblkdsl1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblkdsl2">36</span></td>
-                <td style="text-align: center">
-                    <span id="lblkdsl3">35</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px; height: 21px">
-                    KADRA</td>
-                <td style="width: 81px; height: 21px; text-align: center">
-                    150</td>
-                <td style="width: 104px; height: 21px; text-align: center">
-                    <span id="lblkdrtot">120</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblkdr1">41</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblkdr2">41</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblkdr3">37</span></td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    GERUSOPPA</td>
-                <td style="width: 81px; text-align: center">
-                    240</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblgrsptot">114</span></td>
-                <td style="text-align: center">
-                    <span id="lblgrsp1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblgrsp2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblgrsp3">57</span></td>
-                <td style="text-align: center">
-                    <span id="lblgrsp4">57</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    JOG</td>
-                <td style="width: 81px; text-align: center">
-                    139.2</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lbljogtot">59</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog1">10</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog3">7</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog4">10</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog5">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog6">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog7">15</span></td>
-                <td style="text-align: center">
-                    <span id="lbljog8">16</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    LPH</td>
-                <td style="width: 81px; text-align: center">
-                    55</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lbllphtot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbllph1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbllph2">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    SUPA</td>
-                <td style="width: 81px; text-align: center">
-                    100</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblsupatot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblsupa1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblsupa2">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px; height: 21px">
-                    SHIMSHA</td>
-                <td style="width: 81px; height: 21px; text-align: center">
-                    17.2</td>
-                <td style="width: 104px; height: 21px; text-align: center">
-                    <span id="lblshimtot">7</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshim1">3</span></td>
-                <td style="height: 21px; text-align: center">
-                    <span id="lblshim2">3</span></td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-                <td style="height: 21px; text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    SHIVASAMUDRA</td>
-                <td style="width: 81px; text-align: center">
-                    42</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblshivtot">29</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv2">5</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv3">3</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv4">3</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv5">3</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv6">3</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv7">5</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv8">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv9">5</span></td>
-                <td style="text-align: center">
-                    <span id="lblshiv10">0</span></td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    MANIDAM</td>
-                <td style="width: 81px; text-align: center">
-                    9</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblmanitot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmani1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmani2">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    MUNRABAD</td>
-                <td style="width: 81px; text-align: center">
-                    38</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblmbdtot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmbd1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmbd2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmbd3">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblmbd4"></span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    BHADRA</td>
-                <td style="width: 81px; text-align: center">
-                    39.2</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblbdratot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbdra1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbdra2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbdra3">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbdra4">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblbdra5">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    GHATAPRABHA</td>
-                <td style="width: 81px; text-align: center">
-                    32</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblgtprtot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblgtp1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblgtp2">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    ALMATTI</td>
-                <td style="width: 81px; text-align: center">
-                    290</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblalmttot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt2">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt3">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt4">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt5">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblalmt6">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    JINDAL</td>
-                <td style="width: 81px; text-align: center">
-                    260+1200</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lbljintot">8</span></td>
-                <td style="text-align: center">
-                    <span id="lbljin1">88</span></td>
-                <td style="text-align: center">
-                    <span id="lbljin2">90</span></td>
-                <td style="text-align: center">
-                    <span id="lbljin3">0</span></td>
-                <td style="text-align: center">
-                    <span id="lbljin4">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-           
-            
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    UPCL</td>
-                <td style="width: 81px; text-align: center">
-                    1200</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblupctot">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblupc1">0</span></td>
-                <td style="text-align: center">
-                    <span id="lblupc2">0</span></td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-            
-            <tr>
-                <td bgcolor="#3399cc" style="width: 137px">
-                    TOTAL</td>
-                <td style="width: 81px; text-align: center">
-                    11336.6</td>
-                <td style="width: 104px; text-align: center">
-                    <span id="lblstategen"><b>2271</b></span></td>
-                <td style="text-align: center">
-                </td>
-                <td>
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-                <td style="text-align: center">
-                </td>
-            </tr>
-        </table>
-        <div style="z-index: 1; left: 169px; width: 157px; position: absolute; top: 155px;
-            height: 42px; background-color: #3399cc; text-align: center">
-            <div style="z-index: 1; left: 157px; width: 228px; position: absolute; top: 0px;
-                height: 42px; background-color: #3399cc; text-align: center">
-                <div style="z-index: 1; left: 571px; width: 267px; position: absolute; top: 0px;
-                    height: 42px; background-color: #3399cc; text-align: center">
-                    <strong>TOTAL GENERATION </strong>:
-                    <span id="lbltotgen"><b>7826</b></span>MW</div>
-                <strong>
-                   
-                FREQUENCY</strong> :
-                <span id="lblfreq"><b>50.003197</b></span>
-                Hz</div>
-            <span id="lbldate">05/07/2022 15:42:36</span></div>
-        <input name="TextBox1" type="text" id="TextBox1" />
-        <div style="z-index: 1; left: 711px; width: 186px; position: absolute; top: 155px;
-                    height: 42px; background-color: #3399cc; text-align: center">
-            <span style="font-size: 14pt"><strong>
-            NCEP</strong></span> :
-            <span id="lblncep"><b>4794</b></span>
-            MW</div>
-        <div style="z-index: 1; left: 554px; width: 158px; position: absolute; top: 155px;
-                    height: 42px; background-color: #3399cc; text-align: center">
-            <strong><span style="font-size: 14pt">
-            CGS</span></strong> :
-            <span id="lblcgs"><b>658</b></span>
-        MW
-           
-    </form>
-</body>
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An error occurred during the parsing of a resource required to service this request.   Please review the following specific parse error details and modify your source file appropriately.
+            <br><br>
+
+            <b> Parser Error Message: </b>Could not load the assembly 'App_Web_65job2c1'. Make sure that it is compiled before accessing the page.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+<font color=red>Line 1:  &lt;%@ page language=&quot;C#&quot; autoeventwireup=&quot;true&quot; inherits=&quot;StateGen, App_Web_65job2c1&quot; %&gt;
+</font>Line 2:  
+Line 3:  &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</pre>                      </code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b> Source File: </b> /StateGen.aspx<b> &nbsp;&nbsp; Line: </b> 1
+            <br><br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.8.4494.0
+
+            </font>
+
+    </body>
 </html>
+<!-- 
+[HttpException]: Could not load the assembly &#39;App_Web_65job2c1&#39;. Make sure that it is compiled before accessing the page.
+   at System.Web.UI.TemplateParser.GetType(String typeName, Boolean ignoreCase, Boolean throwOnError)
+   at System.Web.UI.TemplateParser.ProcessInheritsAttribute(String baseTypeName, String codeFileBaseTypeName, String src, Assembly assembly)
+   at System.Web.UI.TemplateParser.PostProcessMainDirectiveAttributes(IDictionary parseData)
+[HttpParseException]: Could not load the assembly &#39;App_Web_65job2c1&#39;. Make sure that it is compiled before accessing the page.
+   at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+[HttpParseException]: Could not load the assembly &#39;App_Web_65job2c1&#39;. Make sure that it is compiled before accessing the page.
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseFile(String physicalPath, VirtualPath virtualPath)
+   at System.Web.UI.TemplateParser.ParseInternal()
+   at System.Web.UI.TemplateParser.Parse()
+   at System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   at System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   at System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp)
+   at System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   at System.Web.UI.PageHandlerFactory.GetHandler(HttpContext context, String requestType, String virtualPath, String path)
+   at System.Web.HttpApplication.MaterializeHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->
